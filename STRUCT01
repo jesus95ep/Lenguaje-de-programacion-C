@@ -1,0 +1,32 @@
+//ESTRUCTURAS
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main (){
+
+    struct {
+        short int NUM;
+        char CAR;
+        float F;
+    } X, Y;
+
+    X.NUM = 856;
+    X.CAR = 'H';
+    X.F = 7.5689;
+
+    printf("\n\n\t TAMAÑO DE X = %d", sizeof(X));
+
+    printf("\n\n X.NUM = %d     X.CAR = %c      X.F = %f  ", X.NUM, X.CAR, X.F);
+    printf("\n\n Y.NUM = %d     Y.CAR = %c      Y.F = %f  \n\n", Y.NUM, Y.CAR, Y.F);// NO SE LE ASIGNO NINGUN VALOR, SOLO TIENE BASURA
+
+    /*
+    Y.NUM= X.NUM;
+    Y.CAR= X.CAR;
+    Y.F= X.F;
+    */
+
+    Y=X; //COPIA DIRECTA DE ESTRUCTURAS
+    printf("\n\n Y.NUM = %d     Y.CAR = %c      Y.F = %f  \n\n", Y.NUM, Y.CAR, Y.F);
+}
